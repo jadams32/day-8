@@ -6,7 +6,10 @@
 # importing the starting logo art
 from logo_art import logo
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', \
+   'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', \
+   'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', \
+   'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # Prints the logo and initalizes a state for the program to loop
 print(logo)
@@ -22,7 +25,8 @@ while program_run:
 
 # Safegaurd for entering a shift number that is too large
     if shift > 26:
-        shift = int(input("Shift number cannot be larger than 26 please try again.\nType the shift number:\n"))
+        shift = int(input("Shift number cannot be larger than 26 please " \
+        "try again. \nType the shift number:\n"))
 
 # Encryption Function
     def encrypt(text, shift):
@@ -54,6 +58,7 @@ while program_run:
         decrypt(text,shift)
 
 # Asking the user if they want to play again.
-    play_again = input('Would you like to restart the cipher program? "Yes" or "No"?\n').lower()
+    play_again = input(
+    'Would you like to restart the cipher program? "Yes" or "No"?\n').lower()
     if play_again == "no":
         program_run = False
